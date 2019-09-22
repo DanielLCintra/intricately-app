@@ -1,8 +1,8 @@
 import 'Styles/main.scss';
 import Vue from 'vue';
-import HelloWorld from 'Components/HelloWorld.vue';
+import Home from './features/Home/HomeIndex.vue';
 
 new Vue({
-  render: createElement => createElement(HelloWorld),
+  render: createElement => createElement(Home),
   el: '#app'
 });
