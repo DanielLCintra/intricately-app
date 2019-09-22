@@ -1,6 +1,6 @@
 <template>
   <div>
-    <header />
+    <Header />
 
     <div class="breadcrumb">
       Breadcrumb
@@ -14,15 +14,15 @@
       </section>
     </div>
 
-    <footer />
+    <Footer />
 
   </div>
 </template>
 
 <script>
-import Footer from "../../components/Footer.vue";
-import Header from "../../components/Header.vue";
-import Sidebar from "../../components/Sidebar.vue";
+import Footer from "Components/Footer.vue";
+import Header from "Components/Header.vue";
+import Sidebar from "Components/Sidebar.vue";
 
 export default {
   name: "Home",
