@@ -2,36 +2,56 @@
   <header>
     <div class="logo">
       <img
-        src="#"
+        src="../assets/logo-pink.png"
         alt="Logo"
       >
     </div>
 
-    <div class="search">
-      <input type="text">
-    </div>
+    <div class="tools-container">
+      <div class="search">
+        <input
+          type="text"
+          placeholder="Search Companies"
+        >
 
-    <div class="smart-list">
-      <button></button>
+        <img
+          class="search__icon"
+          src="src/assets/search@2x.png"
+        >
+      </div>
+
+      <p class="divider-text">
+        OR
+      </p>
+
+      <div class="smart-list">
+        <button>NEW SMARTLIST</button>
+      </div>
     </div>
 
     <menu>
       <ul>
-        <li>Prospects</li>
-        <li>Alert</li>
-        <li>Learn</li>
+        <li>PROSPECTS <img src="src/assets/arrow-down.png"></li>
+        <li>ALERT <img src="src/assets/arrow-down.png"></li>
+        <li>LEARN <img src="src/assets/arrow-down.png"></li>
       </ul>
     </menu>
 
     <div class="avatars">
-      <img
-        src="#"
-        alt="avatar"
-      >
-      <img
-        src="#"
-        alt="avatar"
-      >
+      <div>
+        <img
+          src="src/assets/default.png"
+          alt="avatar"
+        >
+      </div>
+
+      <div>
+        <img
+          src="src/assets/group.png"
+          alt="avatar"
+        >
+        <img src="src/assets/arrow-down.png">
+      </div>
     </div>
   </header>
 </template>

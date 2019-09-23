@@ -6,7 +6,7 @@
       Breadcrumb
     </div>
 
-    <div class="warpper">
+    <div class="wrapper">
       <sidebar />
 
       <section class="dashboard">
