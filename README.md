@@ -43,3 +43,4 @@ To develop the project were used:
 - Vue.js
 - Vue Router
 - Vuex
+- Sass

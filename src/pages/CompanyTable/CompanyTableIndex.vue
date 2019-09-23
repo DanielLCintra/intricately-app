@@ -1,6 +1,12 @@
 <template>
-  <div>
-    <h1>Company Table</h1>
+  <div class="container">
+    <div class="col">
+      <div class="box">
+        <div class="box-title">
+          <b>Company Table</b>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 

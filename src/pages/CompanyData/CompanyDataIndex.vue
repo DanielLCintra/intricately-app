@@ -40,6 +40,7 @@
             name="notes"
             cols="30"
             rows="10"
+            @click="toggleModal()"
           ></textarea>
         </div>
       </div>
@@ -48,8 +49,14 @@
 </template>
 
 <script>
+import { mapActions } from "vuex";
+
 export default {
-  name: "CompanyDataIndex"
+  name: "CompanyDataIndex",
+
+  methods: {
+    ...mapActions(["toggleModal"])
+  }
 };
 </script>
 

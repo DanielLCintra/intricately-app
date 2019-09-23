@@ -9,18 +9,27 @@ export default new Vuex.Store({
     currentPage: {
       title: "Company Page",
       link: "company-page"
-    }
+    },
+    modal: false
   },
 
   mutations: {
     SET_CURRENT_PAGE(state, page) {
       state.currentPage = page;
+    },
+
+    TOGGLE_MODAL(state) {
+      state.modal = !state.modal;
     }
   },
 
   actions: {
     setCurrentPage({ commit }, page) {
       commit("SET_CURRENT_PAGE", page);
+    },
+
+    toggleModal({ commit }, status) {
+      commit("TOGGLE_MODAL");
     }
   }
 });

@@ -1,6 +1,9 @@
 <template>
   <div>
+    <CompanyDataModal :show="modal" />
+
     <Header />
+
     <div class="main-warpper">
       <Breadcrumb />
 
@@ -10,16 +13,18 @@
         <router-view />
       </div>
     </div>
-    <Footer />
 
+    <Footer />
   </div>
 </template>
 
 <script>
+import { mapState } from "vuex";
 import Footer from "Components/Footer.vue";
 import Header from "Components/Header.vue";
 import Sidebar from "Components/Sidebar.vue";
 import Breadcrumb from "Components/Breadcrumb.vue";
+import CompanyDataModal from "Pages/CompanyData/CompanyDataModal.vue";
 
 export default {
   name: "Home",
@@ -28,7 +33,12 @@ export default {
     Footer,
     Header,
     Sidebar,
-    Breadcrumb
+    Breadcrumb,
+    CompanyDataModal
+  },
+
+  computed: {
+    ...mapState(["modal"])
   }
 };
 </script>
