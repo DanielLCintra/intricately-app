@@ -1,0 +1,22 @@
+.box-title {
+  padding: 1em;
+}
+
+.box-input {
+  padding: 1em;
+  display: flex;
+  flex-flow: column;
+  label {
+    font-size: 10px;
+    font-weight: 700;
+    margin-bottom: .5em;
+    color: #b6b6b9;
+  }
+  input[type="text"] {
+    box-shadow: -4px 4px 6px -6px rgba(0,0,0,0.75);
+    border: 1px solid #b6b6b9;
+    border-radius: 4px;
+    height: 30px;
+    max-width: 300px;
+  }
+}

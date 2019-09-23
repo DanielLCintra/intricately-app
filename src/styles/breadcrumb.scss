@@ -1,0 +1,14 @@
+.breadcrumb {
+  font-size: 12px;
+  text-transform: uppercase;
+  padding: 1.5em 0;
+  color: #858899;
+  margin: 0 10em;
+  ul {
+    display: flex;
+
+    li {
+      margin: 0 0.5em;
+    }
+  }
+}
