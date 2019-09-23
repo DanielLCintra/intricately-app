@@ -46,13 +46,14 @@
               v-model="company.spend_ability_min"
               type="text"
               value=""
-              placeholder="e.g. $150,000 - $300,000"
+              placeholder="e.g. $150,000 -"
             >
 
             <input
               v-model="company.spend_ability_max"
               type="text"
               value=""
+              placeholder="$300,000"
             >
           </div>
         </div>
