@@ -6,6 +6,17 @@ header {
   align-items: center;
   justify-content: space-between;
   padding: 0 2em;
+  menu ul {
+    display: flex;
+  }
+
+  menu ul li {
+    padding: 1em;
+    align-items: center;
+    display: flex;
+    color: white;
+    font-size: 12px;
+  }
 }
 
 .logo {
@@ -61,18 +72,7 @@ img.search__icon {
   font-size: 10px;
 }
 
-menu ul {
-  list-style-type: none;
-  display: flex;
-}
 
-menu ul li {
-  padding: 1em;
-  align-items: center;
-  display: flex;
-  color: white;
-  font-size: 12px;
-}
 
 .avatars {
   display: flex;

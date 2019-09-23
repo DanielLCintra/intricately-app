@@ -1,0 +1,39 @@
+footer {
+  position: relative;
+  background-color: #fff;
+  padding: 1.5em 2em;
+  margin-top: 1em;
+  .wrapper-footer {
+    padding: 0.5em;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  menu {
+    ul {
+      display: flex;
+      li {
+        font-size: 12px;
+        color: #9597a2;
+        border-left: 1px solid rgba(149, 151, 162, 0.5);
+        padding: 0 1em;
+
+        &:first-child {
+          border: 0;
+        }
+      }
+    }
+  }
+  .copyright {
+    font-size: 12px;
+    color: #bbb;
+    margin-left: 1em;
+  }
+  .social-media {
+    image {
+      padding: 0 0.5em;
+    }
+  }
+}

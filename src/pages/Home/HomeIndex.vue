@@ -1,19 +1,15 @@
 <template>
   <div>
     <Header />
+    <div class="main-warpper">
+      <Breadcrumb />
 
-    <div class="breadcrumb">
-      Breadcrumb
+      <div class="wrapper">
+        <Sidebar />
+
+        <router-view />
+      </div>
     </div>
-
-    <div class="wrapper">
-      <sidebar />
-
-      <section class="dashboard">
-        <h1>Microsoft</h1>
-      </section>
-    </div>
-
     <Footer />
 
   </div>
@@ -23,6 +19,7 @@
 import Footer from "Components/Footer.vue";
 import Header from "Components/Header.vue";
 import Sidebar from "Components/Sidebar.vue";
+import Breadcrumb from "Components/Breadcrumb.vue";
 
 export default {
   name: "Home",
@@ -30,7 +27,8 @@ export default {
   components: {
     Footer,
     Header,
-    Sidebar
+    Sidebar,
+    Breadcrumb
   }
 };
 </script>

@@ -1,9 +1,11 @@
 <template>
-  <menu>
+  <menu class="menu-sidebar">
     <ul>
       <li
         v-for="(item, key) in items"
         :key="key"
+        :class="{'active' : currentPage.title === item.title}"
+        @click="navigate(item)"
       >
         {{ item.title }}
       </li>
@@ -12,6 +14,8 @@
 </template>
 
 <script>
+import { mapActions, mapState } from "vuex";
+
 export default {
   Name: "Sidebar",
 
@@ -19,20 +23,34 @@ export default {
     items: [
       {
         title: "Company Data",
-        link: ""
+        link: "company-data"
       },
       {
         title: "Company Table",
-        link: ""
+        link: "company-table"
       },
       {
         title: "Company Page",
-        link: ""
+        link: "company-page"
       }
     ]
-  })
+  }),
+
+  computed: {
+    ...mapState(["currentPage"])
+  },
+
+  methods: {
+    ...mapActions(["setCurrentPage"]),
+
+    navigate(page) {
+      if (page.link === "company-page") {
+        this.$router.push("/");
+      } else {
+        this.$router.push(`/${page.link}`);
+      }
+      this.setCurrentPage(page);
+    }
+  }
 };
 </script>
-
-<style>
-</style>

@@ -1,5 +1,7 @@
 import "Styles/main.scss";
 import "Styles/header.scss";
+import "Styles/sidebar.scss";
+import "Styles/footer.scss";
 import Vue from "vue";
 import store from "./store/index";
 import router from "./router/index";
