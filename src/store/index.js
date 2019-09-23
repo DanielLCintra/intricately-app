@@ -10,7 +10,8 @@ export default new Vuex.Store({
       title: "Company Page",
       link: "company-page"
     },
-    modal: false
+    modal: false,
+    notes: []
   },
 
   mutations: {
@@ -20,6 +21,10 @@ export default new Vuex.Store({
 
     TOGGLE_MODAL(state) {
       state.modal = !state.modal;
+    },
+
+    ADD_NOTE(state, note) {
+      state.notes.push(note);
     }
   },
 
@@ -30,6 +35,10 @@ export default new Vuex.Store({
 
     toggleModal({ commit }, status) {
       commit("TOGGLE_MODAL");
+    },
+
+    addNote({ commit }, note) {
+      commit("ADD_NOTE", note);
     }
   }
 });

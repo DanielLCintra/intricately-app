@@ -17,11 +17,12 @@
               type="text"
               class="form__input"
               placeholder="e.g Your Company Name"
+              @blur="$v.$touch"
             >
           </div>
 
           <div
-            v-if="!$v.company.name.required"
+            v-if="$v.company.name.$error"
             class="error"
           >
             Company name is required
@@ -43,18 +44,29 @@
           <label for="">COMPANY SPEND ABILITY</label>
           <div class="input-group">
             <input
-              v-model="company.spend_ability_min"
+              v-model="company.spendAbilityMin"
+              v-mask="'$###,###'"
               type="text"
               value=""
               placeholder="e.g. $150,000 -"
+              @blur="validate"
             >
 
             <input
-              v-model="company.spend_ability_max"
+              v-model="company.spendAbilityMax"
+              v-mask="'$###,###'"
               type="text"
               value=""
               placeholder="$300,000"
+              @blur="validate"
             >
+
+            <div
+              v-if="hasError"
+              class="error"
+            >
+              Spend Ability Max has to be greater than Min, and Min has to be lower then Max.
+            </div>
           </div>
         </div>
 
@@ -62,10 +74,12 @@
           <label for="">NOTES</label>
           <textarea
             id="notes"
+            v-model="notes"
             name="notes"
             cols="30"
             rows="10"
             placeholder="e.g. Good Tech Company"
+            readonly
             @click="toggleModal()"
           />
         </div>
@@ -75,21 +89,24 @@
 </template>
 
 <script>
+/* eslint-disable radix */
 import { mapActions } from 'vuex'
 import { required } from 'vuelidate/lib/validators'
+import Company from '../../models/Company'
 
 export default {
   name: 'CompanyDataIndex',
 
   data: () => ({
-    company: {
-      name: null,
-      spend: 0,
-      spend_ability_min: 0,
-      spend_ability_max: 0,
-      notes: []
-    }
+    company: new Company(),
+    hasError: false
   }),
+
+  computed: {
+    notes() {
+      return this.$store.state.notes.join(',\n')
+    }
+  },
 
   validations: {
     company: {
@@ -100,7 +117,23 @@ export default {
   },
 
   methods: {
-    ...mapActions(['toggleModal'])
+    ...mapActions(['toggleModal']),
+
+    validate() {
+      const { spendAbilityMin, spendAbilityMax } = this.company
+      if (spendAbilityMin === null || spendAbilityMax === null ) {
+        this.hasError = false
+        return
+      }
+      const validation1 = this.convertToNumber(spendAbilityMin) < this.convertToNumber(spendAbilityMax)
+      const validation2 = this.convertToNumber(spendAbilityMax) > this.convertToNumber(spendAbilityMin)
+
+      this.hasError = !validation1 || !validation2
+    },
+
+    convertToNumber(string) {
+      return parseInt(string.replace('$', ''))
+    }
   }
 }
 </script>

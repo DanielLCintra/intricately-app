@@ -1,6 +1,9 @@
 <template>
   <div>
-    <CompanyDataModal :show="modal" />
+    <CompanyDataModal
+      :show="modal"
+      @close-modal="toggleModal"
+    />
 
     <Header />
 
@@ -19,7 +22,7 @@
 </template>
 
 <script>
-import { mapState } from 'vuex'
+import { mapState, mapActions } from 'vuex'
 import Footer from 'Components/Footer.vue'
 import Header from 'Components/Header.vue'
 import Sidebar from 'Components/Sidebar.vue'
@@ -39,6 +42,10 @@ export default {
 
   computed: {
     ...mapState(['modal'])
+  },
+
+  methods: {
+    ...mapActions(['toggleModal'])
   }
 }
 </script>

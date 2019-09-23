@@ -19,16 +19,26 @@
 
           <textarea
             id="notes"
+            v-model="text"
             name="notes"
             cols="30"
             rows="10"
+            placeholder="e.g. Good Tech Company"
           />
+
+          <div
+            v-if="$v.text.$error"
+            class="error"
+          >
+            Note is required
+          </div>
         </div>
 
         <div class="box-button">
           <input
             type="button"
             value="SAVE"
+            @click="saveNote"
           >
         </div>
       </div>
@@ -38,6 +48,7 @@
 
 <script>
 import { mapActions } from 'vuex'
+import { required } from 'vuelidate/lib/validators'
 
 export default {
   name: 'CompanyDataModal',
@@ -49,8 +60,27 @@ export default {
     }
   },
 
+  data: () => ({
+    text: ''
+  }),
+
+  validations: {
+    text: {
+      required
+    }
+  },
+
   methods: {
-    ...mapActions(['toggleModal'])
+    ...mapActions(['toggleModal', 'addNote']),
+
+    saveNote() {
+      this.$v.$touch()
+      if (!this.$v.$invalid) {
+        this.addNote(this.text)
+        this.text = ''
+        this.$emit('close-modal')
+      }
+    }
   }
 }
 </script>

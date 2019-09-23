@@ -53,7 +53,7 @@
               v-for="(item, key) in similarCompanies"
               :key="key"
             >
-              <div class="content-box">
+              <div class="content-box no-border">
                 <div class="content-box__logo">
                   <img :src="item.logo">
                 </div>
@@ -80,7 +80,7 @@
               v-for="(item, key) in companySpendHistory"
               :key="key"
             >
-              <div class="content-box">
+              <div class="content-box no-border">
                 <div class="content-box__logo">
                   <img :src="item.logo">
                 </div>

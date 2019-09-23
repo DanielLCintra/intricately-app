@@ -15,8 +15,8 @@
     input:nth-child(2) {
       border-left: 0;
       left: 0;
-      margin-left: -37px;
-      width: 131px;
+      margin-left: -182px;
+      width: 152px;
       border-radius: 0 4px 4px 0;
     }
   }
@@ -36,10 +36,10 @@
   }
   input {
     box-shadow: 1px 2px 9px -8px rgba(0, 0, 0, 0.75);
-    border: 1px solid #b6b6b9;
+    border: 1px solid #d8d8d8;
     border-radius: 4px;
     height: 30px;
-    max-width: 300px;
+    width: 45%;
     padding: 0 1em;
     &::placeholder {
       color: #b6b6b9;
@@ -50,7 +50,7 @@
     border: 0;
     border-radius: 4px;
     border: 1px solid #39478229;
-    box-shadow: -4px 4px 6px -6px rgba(0, 0, 0, 0.75);
+    box-shadow: 1px 2px 9px -8px rgba(0, 0, 0, 0.75);
     &::placeholder {
       color: #b6b6b9;
       padding: 1em;
@@ -73,23 +73,9 @@
     padding: 5em;
     .box {
       margin: 10em auto 0;
-      height: 250px;
       width: 600px;
-    }
-    .box-button {
-      display: flex;
-      justify-content: flex-end;
-      padding: 0 1em;
-      input[type="button"] {
-        border: 0;
-        border-radius: 4px;
-        background-color: #394782;
-        color: white;
-        padding: 0 1em;
-        width: 100px;
-        height: 30px;
-        font-weight: bold;
-      }
+      padding: 0 1em 1em 1em;
+      box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.38);
     }
     .box-input {
       margin-top: 2em;
@@ -97,8 +83,24 @@
         border: 0;
         border-radius: 4px;
         border: 1px solid #39478229;
-        box-shadow: -4px 4px 6px -6px rgba(0, 0, 0, 0.75);
+        box-shadow: 1px 2px 9px -8px rgba(0, 0, 0, 0.75);
       }
     }
+  }
+}
+
+.box-button {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0 1em;
+  input[type="button"] {
+    border: 0;
+    border-radius: 4px;
+    background-color: #394782;
+    color: white;
+    padding: 0 1em;
+    width: 100px;
+    height: 30px;
+    font-weight: bold;
   }
 }
