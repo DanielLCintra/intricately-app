@@ -1,6 +1,4 @@
----
 # Intricately App - By Daniel Cintra
----
 
 ### To run project in development mode:
 
