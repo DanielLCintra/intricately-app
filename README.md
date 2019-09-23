@@ -14,29 +14,29 @@ Clone the repo, install all project's dependencies with `npm install`, and run `
 
 ---
 
-## Intricately App - By Daniel Cintra
+# Intricately App - By Daniel Cintra
 
 ---
 
-## To run project in development mode:
+### To run project in development mode:
 
 ```sh
 npm run start or yarn start
 ```
 
-## To build project
+### To build project
 
 ```sh
 npm run predev or yarn predev
 ```
 
-## To run tests
+### To run tests
 
 ```sh
 npm run test or yarn test
 ```
 
-## Utilized Libraries
+### Utilized Libraries
 
 To develop the project were used:
 
