@@ -4,7 +4,7 @@
       <li
         v-for="(item, key) in items"
         :key="key"
-        :class="{'active' : currentPage.title === item.title}"
+        :class="{'active' : $route.name === item.link}"
         @click="navigate(item)"
       >
         {{ item.title }}

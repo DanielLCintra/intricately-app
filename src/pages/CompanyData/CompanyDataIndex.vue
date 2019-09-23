@@ -121,7 +121,7 @@ export default {
 
     validate() {
       const { spendAbilityMin, spendAbilityMax } = this.company
-      if (spendAbilityMin === null || spendAbilityMax === null ) {
+      if (spendAbilityMin === null || spendAbilityMax === null) {
         this.hasError = false
         return
       }
