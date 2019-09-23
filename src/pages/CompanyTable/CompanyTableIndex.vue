@@ -12,8 +12,8 @@
 
 <script>
 export default {
-  name: "CompanyTableIndex"
-};
+  name: 'CompanyTableIndex'
+}
 </script>
 
 <style>

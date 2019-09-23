@@ -22,7 +22,7 @@
             name="notes"
             cols="30"
             rows="10"
-          ></textarea>
+          />
         </div>
 
         <div class="box-button">
@@ -37,10 +37,10 @@
 </template>
 
 <script>
-import { mapActions } from "vuex";
+import { mapActions } from 'vuex'
 
 export default {
-  name: "CompanyDataModal",
+  name: 'CompanyDataModal',
 
   props: {
     show: {
@@ -50,9 +50,9 @@ export default {
   },
 
   methods: {
-    ...mapActions(["toggleModal"])
+    ...mapActions(['toggleModal'])
   }
-};
+}
 </script>
 
 <style>

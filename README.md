@@ -40,7 +40,9 @@ yarn test
 
 To develop the project were used:
 
-- Vue.js
+- Vue
 - Vue Router
 - Vuex
+- Vuelidate
+- V-Mask
 - Sass

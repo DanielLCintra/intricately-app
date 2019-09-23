@@ -6,9 +6,14 @@ import "Styles/breadcrumb.scss";
 import "Styles/company-page.scss";
 import "Styles/company-data.scss";
 import Vue from "vue";
-import store from "./store/index";
-import router from "./router/index";
 import Home from "Pages/Home/HomeIndex.vue";
+import Vuelidate from "vuelidate";
+import VueMask from "v-mask";
+import router from "./router/index";
+import store from "./store/index";
+
+Vue.use(VueMask);
+Vue.use(Vuelidate);
 
 new Vue({
   router,

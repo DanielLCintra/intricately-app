@@ -9,15 +9,15 @@
 </template>
 
 <script>
-import { mapState } from "vuex";
+import { mapState } from 'vuex'
 
 export default {
-  name: "Breadcrumb",
+  name: 'Breadcrumb',
 
   computed: {
-    ...mapState(["currentPage"])
+    ...mapState(['currentPage'])
   }
-};
+}
 </script>
 
 <style>

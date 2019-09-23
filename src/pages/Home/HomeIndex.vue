@@ -19,15 +19,15 @@
 </template>
 
 <script>
-import { mapState } from "vuex";
-import Footer from "Components/Footer.vue";
-import Header from "Components/Header.vue";
-import Sidebar from "Components/Sidebar.vue";
-import Breadcrumb from "Components/Breadcrumb.vue";
-import CompanyDataModal from "Pages/CompanyData/CompanyDataModal.vue";
+import { mapState } from 'vuex'
+import Footer from 'Components/Footer.vue'
+import Header from 'Components/Header.vue'
+import Sidebar from 'Components/Sidebar.vue'
+import Breadcrumb from 'Components/Breadcrumb.vue'
+import CompanyDataModal from 'Pages/CompanyData/CompanyDataModal.vue'
 
 export default {
-  name: "Home",
+  name: 'Home',
 
   components: {
     Footer,
@@ -38,7 +38,7 @@ export default {
   },
 
   computed: {
-    ...mapState(["modal"])
+    ...mapState(['modal'])
   }
-};
+}
 </script>

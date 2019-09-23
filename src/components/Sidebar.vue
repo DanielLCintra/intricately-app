@@ -14,43 +14,43 @@
 </template>
 
 <script>
-import { mapActions, mapState } from "vuex";
+import { mapActions, mapState } from 'vuex'
 
 export default {
-  Name: "Sidebar",
+  Name: 'Sidebar',
 
   data: () => ({
     items: [
       {
-        title: "Company Data",
-        link: "company-data"
+        title: 'Company Data',
+        link: 'company-data'
       },
       {
-        title: "Company Table",
-        link: "company-table"
+        title: 'Company Table',
+        link: 'company-table'
       },
       {
-        title: "Company Page",
-        link: "company-page"
+        title: 'Company Page',
+        link: 'company-page'
       }
     ]
   }),
 
   computed: {
-    ...mapState(["currentPage"])
+    ...mapState(['currentPage'])
   },
 
   methods: {
-    ...mapActions(["setCurrentPage"]),
+    ...mapActions(['setCurrentPage']),
 
     navigate(page) {
-      if (page.link === "company-page") {
-        this.$router.push("/");
+      if (page.link === 'company-page') {
+        this.$router.push('/')
       } else {
-        this.$router.push(`/${page.link}`);
+        this.$router.push(`/${page.link}`)
       }
-      this.setCurrentPage(page);
+      this.setCurrentPage(page)
     }
   }
-};
+}
 </script>
