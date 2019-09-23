@@ -1,14 +1,14 @@
-import Vue from "vue";
-import Vuex from "vuex";
+import Vue from 'vue'
+import Vuex from 'vuex'
 
-Vue.use(Vuex);
+Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
     list: [],
     currentPage: {
-      title: "Company Page",
-      link: "company-page"
+      title: 'Company Page',
+      link: 'company-page'
     },
     modal: false,
     notes: []
@@ -16,29 +16,29 @@ export default new Vuex.Store({
 
   mutations: {
     SET_CURRENT_PAGE(state, page) {
-      state.currentPage = page;
+      state.currentPage = page
     },
 
     TOGGLE_MODAL(state) {
-      state.modal = !state.modal;
+      state.modal = !state.modal
     },
 
     ADD_NOTE(state, note) {
-      state.notes.push(note);
+      state.notes.push(note)
     }
   },
 
   actions: {
     setCurrentPage({ commit }, page) {
-      commit("SET_CURRENT_PAGE", page);
+      commit('SET_CURRENT_PAGE', page)
     },
 
-    toggleModal({ commit }, status) {
-      commit("TOGGLE_MODAL");
+    toggleModal({ commit }) {
+      commit('TOGGLE_MODAL')
     },
 
     addNote({ commit }, note) {
-      commit("ADD_NOTE", note);
+      commit('ADD_NOTE', note)
     }
   }
-});
+})
